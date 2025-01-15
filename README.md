@@ -17,9 +17,9 @@ Amazon Polly is a cloud-based service provided by Amazon Web Services (AWS) that
 
 Step 1: Set Up an AWS Account
 
-Step 2: Create two S3 Buckets (Source S3 Bucket Name: amc-polly-source-bucket, Destination S3 Bucket Name: amc-polly-destination-bucket)
+Step 2: Create two S3 Buckets (Source S3 Bucket Name: my-polly-source-bucket, Destination S3 Bucket Name: my-polly-destination-bucket)
 
-Step 3: Create an IAM Policy (IAM Policy Name: amc-polly-lambda-policy)
+Step 3: Create an IAM Policy (IAM Policy Name: my-polly-lambda-policy)
 ```json
 {
   "Version": "2012-10-17",
@@ -31,8 +31,8 @@ Step 3: Create an IAM Policy (IAM Policy Name: amc-polly-lambda-policy)
               "s3:PutObject"
           ],
           "Resource": [
-              "arn:aws:s3:::amc-polly-source-bucket/*",
-              "arn:aws:s3:::amc-polly-destination-bucket/*"
+              "arn:aws:s3:::my-polly-source-bucket/*",
+              "arn:aws:s3:::my-polly-destination-bucket/*"
           ]
       },
       {
@@ -46,10 +46,10 @@ Step 3: Create an IAM Policy (IAM Policy Name: amc-polly-lambda-policy)
 }
 ```
 
-Step 4: Create an IAM Role (IAM Role Name: amc-polly-lambda-role) and attach amc-polly-lambda-policy and AWSLambdaBasicExecutionRole Policies
+Step 4: Create an IAM Role (IAM Role Name: my-polly-lambda-role) and attach my-polly-lambda-policy and AWSLambdaBasicExecutionRole Policies
 
 Step 5: Create and Configure the Lambda Function (Lambda Function Name: TextToSpeechFunction)
-Set the runtime to Python 3.8.
+Set the runtime to Python 3.9.
 Set the execution role with necessary permissions for S3 and Polly. (Step 4)
 Add Environment Variables (SOURCE_BUCKET: Name of your source S3 bucket and DESTINATION_BUCKET: Name of your destination S3 bucket.
 
