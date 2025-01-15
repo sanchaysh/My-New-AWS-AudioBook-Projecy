@@ -1,4 +1,4 @@
-# My-New-AWS-AudioBook-Projecy
+# My-New-AWS-AudioBook-Project
 #Transforming Text into Speech: My AWS Polly Project with Lambda and Python
 
 # Overview:
