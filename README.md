@@ -20,6 +20,30 @@ Step 1: Set Up an AWS Account
 Step 2: Create two S3 Buckets (Source S3 Bucket Name: amc-polly-source-bucket, Destination S3 Bucket Name: amc-polly-destination-bucket)
 
 Step 3: Create an IAM Policy (IAM Policy Name: amc-polly-lambda-policy)
+'''json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "s3:GetObject",
+              "s3:PutObject"
+          ],
+          "Resource": [
+              "arn:aws:s3:::amc-polly-source-bucket/*",
+              "arn:aws:s3:::amc-polly-destination-bucket/*"
+          ]
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "polly:SynthesizeSpeech"
+          ],
+          "Resource": "*"
+      }
+  ]
+}
 
 Step 4: Create an IAM Role (IAM Role Name: amc-polly-lambda-role) and attach amc-polly-lambda-policy and AWSLambdaBasicExecutionRole Policies
 
