@@ -44,8 +44,28 @@ Step 3: Create an IAM Policy (IAM Policy Name: amc-polly-lambda-policy)
       }
   ]
 }
+```
+
+Step 4: Create an IAM Role (IAM Role Name: amc-polly-lambda-role) and attach amc-polly-lambda-policy and AWSLambdaBasicExecutionRole Policies
+
+Step 5: Create and Configure the Lambda Function (Lambda Function Name: TextToSpeechFunction)
+Set the runtime to Python 3.8.
+Set the execution role with necessary permissions for S3 and Polly. (Step 4)
+Add Environment Variables (SOURCE_BUCKET: Name of your source S3 bucket and DESTINATION_BUCKET: Name of your destination S3 bucket.
+
+Step 6: Configure S3 Event Notification
+Set up an event notification in the source S3 bucket to trigger the Lambda function on new object creation events with the .txt suffix.
+
+Step 7: Write Lambda Function Code
+
+Step 8: Test the System
 
 
+# Use Cases
+Accessibility: Polly is widely used to make content more accessible by converting written text into spoken words. This is particularly beneficial for users with visual impairments, allowing them to consume information through audio.
 
+E-Learning: In e-learning applications, Polly can be used to convert text-based content into spoken words, creating a more engaging learning experience. This is especially useful for educational platforms and training materials.
 
+Interactive Voice Response (IVR) Systems: Polly is employed in IVR systems to generate natural-sounding prompts and messages. This ensures a more pleasant and effective interaction with users in scenarios such as customer support lines.
 
+Content Creation: Developers use Polly to generate voiceovers for multimedia content, including videos and podcasts. This simplifies the process of creating audio content without the need for manual voice recording.
