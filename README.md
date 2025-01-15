@@ -36,5 +36,15 @@ Step 7: Write Lambda Function Code
 Step 8: Test the System
 
 
+# Use Cases
+Accessibility: Polly is widely used to make content more accessible by converting written text into spoken words. This is particularly beneficial for users with visual impairments, allowing them to consume information through audio.
+
+E-Learning: In e-learning applications, Polly can be used to convert text-based content into spoken words, creating a more engaging learning experience. This is especially useful for educational platforms and training materials.
+
+Interactive Voice Response (IVR) Systems: Polly is employed in IVR systems to generate natural-sounding prompts and messages. This ensures a more pleasant and effective interaction with users in scenarios such as customer support lines.
+
+Content Creation: Developers use Polly to generate voiceovers for multimedia content, including videos and podcasts. This simplifies the process of creating audio content without the need for manual voice recording.
+
+
 
 
